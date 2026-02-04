@@ -1,49 +1,102 @@
-body {
-  background: linear-gradient(to right, #ff9a9e, #fad0c4);
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Glass container */
 .container {
-  max-width: 800px;
-  margin: auto;
-  padding: 30px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
   font-family: 'Pacifico', cursive;
   text-align: center;
   color: #e63946;
+  font-size: 3rem;
 }
 
 .subtitle {
   text-align: center;
-  margin-bottom: 30px;
+  color: #555;
+  margin-bottom: 40px;
 }
 
+/* Love list */
 ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  background: #ffe5ec;
-  margin: 10px 0;
-  padding: 12px 16px;
-  border-radius: 10px;
-  transition: transform 0.2s;
+  background: linear-gradient(135deg, #ffe5ec, #fff);
+  margin: 14px 0;
+  padding: 16px 20px;
+  border-radius: 14px;
+  cursor: pointer;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+li.show {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 li:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.2);
 }
 
-footer {
+/* Final note */
+.love-note {
+  margin-top: 50px;
+  padding: 30px;
   text-align: center;
+  background: #e63946;
+  color: white;
+  border-radius: 16px;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
   margin-top: 30px;
-  font-weight: bold;
+  text-align: center;
+  color: #777;
+}
+
+/* Floating hearts */
+.hearts::before {
+  content: "❤️ 💕 💖 💘 💝";
+  position: fixed;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  animation: floatHearts 15s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes floatHearts {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(120vh);
+  }
 }
