@@ -2,34 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>100 Things I Love About You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rohan &amp; Melisha | Our Little Valentine Site ❤️</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-
   <!-- Floating hearts -->
   <div class="hearts"></div>
 
+  <!-- Entry gate -->
+  <div id="valentine-gate" class="gate">
+    <div class="gate-card">
+      <h1>Melisha, will you be my Valentine?</h1>
+      <p class="gate-text">
+        Before you step inside our little world, you have to answer one very important question.
+      </p>
+      <div class="gate-buttons">
+        <button id="gate-yes" class="primary-btn">Yes, of course 💕</button>
+        <button id="gate-no" class="ghost-btn">No</button>
+      </div>
+      <p class="gate-hint">(Hint: the \"No\" button doesn&apos;t really want to be clicked.)</p>
+    </div>
+  </div>
+
   <main class="container">
-    <h1>💖 100 Things I Love About You 💖</h1>
-    <p class="subtitle">
-      Every little thing about you makes my world brighter ✨  
-      Tap each one ❤️
-    </p>
+    <header class="top-header">
+      <nav class="nav-bar">
+        <div class="nav-title">For Melisha</div>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="love-letter.html" class="nav-link">Love Letter</a>
+          <a href="bucket-list.html" class="nav-link">Bucket List</a>
+          <a href="promises.html" class="nav-link">Promises</a>
+          <a href="quiz.html" class="nav-link">Quiz</a>
+        </div>
+      </nav>
 
-    <ul id="love-list"></ul>
+      <h1>For Melisha, With All My Heart</h1>
+      <p class="subtitle">
+        Welcome to our little corner of the internet – a place filled with the
+        reasons I love you, the memories we’ve made, the dreams we’re chasing,
+        and the promises I’m making just for you.
+      </p>
 
-    <div class="love-note">
+      <div class="melisha-hero-photo">
+        <img src="photo_gallery/IMG-20251209-WA0019.jpg" alt="Melisha smiling with her birthday cake" />
+      </div>
+
+      <div class="section-nav">
+        <p class="section-nav-label">On this page</p>
+        <button class="scroll-btn" data-scroll="#milestones">🎉 Our Big Days</button>
+        <button class="scroll-btn" data-scroll="#love-list-section">💗 10 Reasons</button>
+        <button class="scroll-btn" data-scroll="#gallery">📸 Photo Gallery</button>
+        <button class="scroll-btn" data-scroll="#memories">📖 Our Story</button>
+      </div>
+    </header>
+
+    <section id="milestones" class="section milestones-section">
+      <h2 class="section-title">Our Big Days</h2>
+      <p class="section-subtitle">
+        A little countdown to the moments where our story takes its biggest steps forward.
+      </p>
+      <div id="milestone-banner" class="milestone-banner"></div>
+      <div class="milestones-grid">
+        <article id="engagement-countdown" class="milestone-card">
+          <h3>Engagement Day</h3>
+          <p class="milestone-date">26 April 2026</p>
+          <div class="countdown-row">
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="days">0</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="hours">0</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="minutes">0</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="seconds">0</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+          <p class="milestone-note">The day we promise forever to each other.</p>
+        </article>
+
+        <article id="wedding-countdown" class="milestone-card">
+          <h3>Wedding Day</h3>
+          <p class="milestone-date">3 January 2027</p>
+          <div class="countdown-row">
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="days">0</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="hours">0</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="minutes">0</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-part">
+              <span class="countdown-number" data-unit="seconds">0</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+          <p class="milestone-note">The day we begin our next chapter as husband and wife.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="love-list-section" class="section section-tinted">
+      <h2 class="section-title">Things I Love About You, Melisha</h2>
+      <button id="random-reason" class="secondary-btn">
+        Show me a random reason
+      </button>
+      <ul id="love-list"></ul>
+    </section>
+
+    <section id="gallery" class="section">
+      <h2 class="section-title">Our Favorite Moments 📸</h2>
+      <p class="section-subtitle">
+        A small gallery of snapshots that make my heart so full.
+      </p>
+      <div class="gallery-grid gallery-large" id="gallery-grid"></div>
+      <p class="section-note">
+        (Every photo here is a little piece of us.)
+      </p>
+    </section>
+
+    <section id="memories" class="section">
+      <h2 class="section-title">Our Little Story 🥰</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>When we first started talking</h3>
+          <p>
+            From the very first few messages, I remember thinking, “I really want to keep talking to her.”
+            I didn’t know it yet, but those tiny conversations were the start of something huge for me.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Our first date</h3>
+          <p>
+            I was a mix of excited and nervous, but the second I saw you, everything felt lighter.
+            Time disappeared that day – it was just you, me, and the feeling that this could be something real.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>One day I knew it was love</h3>
+          <p>
+            There wasn’t fireworks or a movie moment – just a quiet, simple day when I realised my favourite place
+            in the world was right beside you, no matter what we were doing.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Deciding to spend forever together</h3>
+          <p>
+            Somewhere between our late-night talks, shared dreams and silly jokes, I knew I didn’t just want you
+            in my life – I wanted you in every version of my future.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3>Our future together</h3>
+          <p>
+            A home filled with laughter, late-night talks, quiet mornings, shared adventures and countless little
+            moments where we get to look at each other and think, “I’m so glad it’s you.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="love-note">
       <p>
         You are my today, my tomorrow, and every Valentine after this 💕
       </p>
-    </div>
+    </section>
 
     <footer>
-      Made with ❤️ just for you
+      Handmade by Rohan, only for Melisha.
     </footer>
   </main>
+
+  <!-- Lightbox for gallery -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close">&times;</button>
+      <img id="lightbox-image" src="" alt="Our memory" />
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Secret note for Melisha -->
+  <div id="secret-note" class="secret-note hidden">
+    Hey Melisha, if you somehow found this little secret corner: thank you for being my favourite part of every day. 💌
+  </div>
 
   <script src="script.js"></script>
 </body>
